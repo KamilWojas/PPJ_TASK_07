@@ -1,0 +1,18 @@
+public void zad1() {
+
+        int[][] mainArr = new int[3][];
+        int[] rArr;
+        for (int i = 0; i < 3; i++) {
+            int size = (int) (Math.random() * 31) + 1;
+            rArr = new int[size];
+            for (int j = 0; j < rArr.length; j++)
+                rArr[j] = (int) (Math.random() * 10);
+            mainArr[i] = rArr;
+        }
+        for (int i = 0; i < mainArr.length; i++) {
+            for (int j = 0; j < mainArr[i].length; j++) {
+                System.out.print(mainArr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
