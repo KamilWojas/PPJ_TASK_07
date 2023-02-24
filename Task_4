@@ -1,0 +1,27 @@
+public void zad4() {
+
+        int[][] arr = new int[10][10];
+        for (int i = 0; i < arr.length; i++)
+            for (int j = 0; j < arr[i].length; j++)
+                arr[i][j] = (int) (Math.random() * 100);
+
+        int swapper;
+        int j = 0;
+        Boolean changes;
+        for (int i = 0; i < arr.length; i++) {
+            j = 0;
+            do {
+                changes = false;
+                j++;
+                for (int k = 0; k < arr[i].length - j; k++) {
+                    if (arr[i][k] > arr[i][k + 1]) {
+                        swapper = arr[i][k];
+                        arr[i][k] = arr[i][k + 1];
+                        arr[i][k + 1] = swapper;
+                        changes = true;
+                    }
+                }
+            } while (changes);
+        }
+
+    }
